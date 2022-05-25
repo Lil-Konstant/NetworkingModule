@@ -10,8 +10,8 @@ How to integrate NetworkingModule (By Ronan Richardson) into your C++ Visual Stu
     
 2. In your Solution Directory, create a folder called "dependencies", and drag and drop the unzipped NetworkingModule-main folder into it.
 3. Within your Visual Studio project, go into the project properties (Project -> Properties), make sure the Platform is set to Win32.
-4. Under VC++ Directories -> Include Directories, add the path of the NetworkingModule\include folder, $(SolutionDir)dependencies\NetworkingModule\include;
-5. Under VC++ Directories -> Library Directories, add the path of the NetworkingModule\libs folder, $(SolutionDir)dependencies\NetworkingModule\libs;
+4. Under VC++ Directories -> Include Directories, add the path of the NetworkingModule-main\include folder, $(SolutionDir)dependencies\NetworkingModule-main\include;
+5. Under VC++ Directories -> Library Directories, add the path of the NetworkingModule-main\libs folder, $(SolutionDir)dependencies\NetworkingModule-main\libs;
 6. Under Linker -> Additional Dependencies, change the configuration to Debug and add the following library names:
   Bootstrap_d.lib
   Raknet_d.lib
@@ -22,6 +22,8 @@ How to integrate NetworkingModule (By Ronan Richardson) into your C++ Visual Stu
   Raknet.lib
   Client.lib
   ws2_32.lib
+  
+IMPORTANT: Don't forget to add the libsndfile-1.dll and OpenAL32.dll files to whatever build directory you choose, for both release and debug configs
   
 Your Visual Studio C++ project should now be configured to run and make use of the NetworkingModule.
 Inherit your main game client from the public Client class to access the inbuilt networking capabilities.
