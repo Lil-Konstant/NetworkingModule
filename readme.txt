@@ -13,15 +13,15 @@ How to integrate NetworkingModule (By Ronan Richardson) into your C++ Visual Stu
 4. Under VC++ Directories -> Include Directories, add the path of the NetworkingModule-main\include folder, $(SolutionDir)dependencies\NetworkingModule-main\include;
 5. Under VC++ Directories -> Library Directories, add the path of the NetworkingModule-main\libs folder, $(SolutionDir)dependencies\NetworkingModule-main\libs;
 6. Under Linker -> Input -> Additional Dependencies, change the configuration to Debug and add the following library names:
-  Bootstrap_d.lib
-  Raknet_d.lib
-  Client_d.lib
-  ws2_32.lib
+    Bootstrap_d.lib
+    Raknet_d.lib
+    Client_d.lib
+    ws2_32.lib
 7. Under Linker -> Input -> Additional Dependencies, change the configuration to Release and add the following library names:
-  Bootstrap.lib
-  Raknet.lib
-  Client.lib
-  ws2_32.lib
+    Bootstrap.lib
+    Raknet.lib
+    Client.lib
+    ws2_32.lib
   
 IMPORTANT: Don't forget to add the libsndfile-1.dll and OpenAL32.dll files to whatever build directory you choose. Debug builds require both files, whereas Release builds only require OpenAL32.dll.
   
