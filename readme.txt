@@ -23,7 +23,7 @@ How to integrate NetworkingModule (By Ronan Richardson) into your C++ Visual Stu
   Client.lib
   ws2_32.lib
   
-IMPORTANT: Don't forget to add the libsndfile-1.dll and OpenAL32.dll files to whatever build directory you choose, for both release and debug configs.
+IMPORTANT: Don't forget to add the libsndfile-1.dll and OpenAL32.dll files to whatever build directory you choose. Debug build require both files, wheras Release builds only require OpenAL32.dll.
   
 Your Visual Studio C++ project should now be configured to run and make use of the NetworkingModule.
 Inherit your main game client from the public Client class to access the inbuilt networking capabilities.
