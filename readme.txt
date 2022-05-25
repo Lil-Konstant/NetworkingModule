@@ -12,12 +12,12 @@ How to integrate NetworkingModule (By Ronan Richardson) into your C++ Visual Stu
 3. Within your Visual Studio project, go into the project properties (Project -> Properties), make sure the Platform is set to Win32 and Configuration is set to All.
 4. Under VC++ Directories -> Include Directories, add the path of the NetworkingModule-main\include folder, $(SolutionDir)dependencies\NetworkingModule-main\include;
 5. Under VC++ Directories -> Library Directories, add the path of the NetworkingModule-main\libs folder, $(SolutionDir)dependencies\NetworkingModule-main\libs;
-6. Under Linker -> Additional Dependencies, change the configuration to Debug and add the following library names:
+6. Under Linker -> Input -> Additional Dependencies, change the configuration to Debug and add the following library names:
   Bootstrap_d.lib
   Raknet_d.lib
   Client_d.lib
   ws2_32.lib
-7. Under Linker -> Additional Dependencies, change the configuration to Release and add the following library names:
+7. Under Linker -> Input -> Additional Dependencies, change the configuration to Release and add the following library names:
   Bootstrap.lib
   Raknet.lib
   Client.lib
